@@ -1,5 +1,6 @@
 const imageFolder = 'chara/';
 const imageData = [
+    { src: 'syu2.png', category: 'songo' },
     { src: 'aben.png', category: 'songo' },
     { src: 'hugen.png', category: 'songo' },
     { src: 'jepado.png', category: 'songo' },
@@ -31,6 +32,7 @@ const imageData = [
     { src: 'sanpo.png', category: 'kyomu' },
     { src: 'pera.png', category: 'kyomu' },
     { src: 'velto.png', category: 'kyomu' },
+    { src: 'syu1.png', category: 'kaimetsu' },
     { src: 'unri.png', category: 'kaimetsu' },
     { src: 'hotaru.png', category: 'kaimetsu' },
     { src: 'ingetsu.png', category: 'kaimetsu' },
@@ -41,6 +43,7 @@ const imageData = [
     { src: 'hukku.png', category: 'kaimetsu' },
     { src: 'kurara.png', category: 'kaimetsu' },
     { src: 'aran.png', category: 'kaimetsu' },
+    { src: 'syu3.png', category: 'tyouwa' },
     { src: 'robin.png', category: 'tyouwa' },
     { src: 'hanabi.png', category: 'tyouwa' },
     { src: 'ruanmama.png', category: 'tyouwa' },
