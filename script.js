@@ -15,6 +15,7 @@ const imageData = [
     { src: 'genkyo.png', category: 'junsyu' },
     { src: 'susyo.png', category: 'junsyu' },
     { src: 'tankou.png', category: 'junsyu' },
+    { src: 'ranpa.png', category: 'tie' },
     { src: 'jeido.png', category: 'tie' },
     { src: 'arujen.png', category: 'tie' },
     { src: 'keigen.png', category: 'tie' },
