@@ -24,6 +24,7 @@ const imageData = [
     { src: 'sebaru.png', category: 'tie' },
     { src: 'helta.png', category: 'tie' },
     { src: 'himeko.png', category: 'tie' },
+    { src: 'newteiun.png', category: 'kyomu' },
     { src: 'syokyu.png', category: 'kyomu' },
     { src: 'yomi.png', category: 'kyomu' },
     { src: 'swan.png', category: 'kyomu' },
