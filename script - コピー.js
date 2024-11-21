@@ -65,10 +65,7 @@ const imageData = [
     { src: 'rinkusu.png', category: 'houjou' },
     { src: 'byakuro.png', category: 'houjou' },
     { src: 'natasya.png', category: 'houjou' },
-    { src: 'reisa.png', category: 'houjou' },
-    { src: 'aguraia.png', category: 'kioku' },
-    { src: 'syu4.png', category: 'kioku' },
-    { src: 'sei4.png', category: 'kioku' }
+    { src: 'reisa.png', category: 'houjou' }
 ];
 const MAX_SELECTION = 3;
 const SELECTED_LABEL = '☑';
@@ -156,14 +153,13 @@ function loadImages() {
     function handleImageClick(img, category) {
         const src = img.dataset.src;
         const columnMapping = {
-            'kaimetsu': [0, 8,  16],
-            'junsyu':   [1, 9,  17],
-            'kyomu':    [2, 10, 18],
-            'tie':      [3, 11, 19],
-            'songo':    [4, 12, 20],
-            'tyouwa':   [5, 13, 21],
-            'houjou':   [6, 14, 22],
-            'kioku':    [7, 15, 23]
+            'kaimetsu': [0, 7, 14],
+            'junsyu': [1, 8, 15],
+            'kyomu': [2, 9, 16],
+            'tie': [3, 10, 17],
+            'songo': [4, 11, 18],
+            'tyouwa': [5, 12, 19],
+            'houjou': [6, 13, 20]
         };
 
         const positions = columnMapping[category] || [];
@@ -255,14 +251,13 @@ function loadImages() {
 
     function updateImageNumbers(tabCategory) {
         const columnMapping = {
-            'kaimetsu': [0, 8,  16],
-            'junsyu':   [1, 9,  17],
-            'kyomu':    [2, 10, 18],
-            'tie':      [3, 11, 19],
-            'songo':    [4, 12, 20],
-            'tyouwa':   [5, 13, 21],
-            'houjou':   [6, 14, 22],
-            'kioku':    [7, 15, 23]
+            'kaimetsu': [0, 7, 14],
+            'junsyu': [1, 8, 15],
+            'kyomu': [2, 9, 16],
+            'tie': [3, 10, 17],
+            'songo': [4, 11, 18],
+            'tyouwa': [5, 12, 19],
+            'houjou': [6, 13, 20]
         };
 
         const selectedCategory = tabSelections[tabCategory] || [];
@@ -276,14 +271,13 @@ function loadImages() {
 
     function repositionImages(tabCategory) {
         const columnMapping = {
-            'kaimetsu': [0, 8,  16],
-            'junsyu':   [1, 9,  17],
-            'kyomu':    [2, 10, 18],
-            'tie':      [3, 11, 19],
-            'songo':    [4, 12, 20],
-            'tyouwa':   [5, 13, 21],
-            'houjou':   [6, 14, 22],
-            'kioku':    [7, 15, 23]
+            'kaimetsu': [0, 7, 14],
+            'junsyu': [1, 8, 15],
+            'kyomu': [2, 9, 16],
+            'tie': [3, 10, 17],
+            'songo': [4, 11, 18],
+            'tyouwa': [5, 12, 19],
+            'houjou': [6, 13, 20]
         };
 
         const selectedCategory = tabSelections[tabCategory] || [];
@@ -313,14 +307,13 @@ function loadImages() {
     function restoreSelectionState(category) {
         const selectedCategory = tabSelections[category] || [];
         const columnMapping = {
-            'kaimetsu': [0, 8,  16],
-            'junsyu':   [1, 9,  17],
-            'kyomu':    [2, 10, 18],
-            'tie':      [3, 11, 19],
-            'songo':    [4, 12, 20],
-            'tyouwa':   [5, 13, 21],
-            'houjou':   [6, 14, 22],
-            'kioku':    [7, 15, 23]
+            'kaimetsu': [0, 7, 14],
+            'junsyu': [1, 8, 15],
+            'kyomu': [2, 9, 16],
+            'tie': [3, 10, 17],
+            'songo': [4, 11, 18],
+            'tyouwa': [5, 12, 19],
+            'houjou': [6, 13, 20]
         };
         const positions = columnMapping[category] || [];
 
