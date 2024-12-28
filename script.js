@@ -48,6 +48,7 @@ const imageData = [
     { src: 'hukku.png', category: 'kaimetsu' },
     { src: 'kurara.png', category: 'kaimetsu' },
     { src: 'aran.png', category: 'kaimetsu' },
+    { src: 'toribi.png', category: 'tyouwa' },
     { src: 'sunday.png', category: 'tyouwa' },
     { src: 'syu3.png', category: 'tyouwa' },
     { src: 'sei3.png', category: 'tyouwa' },
