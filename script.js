@@ -39,6 +39,7 @@ const imageData = [
     { src: 'sanpo.png', category: 'kyomu' },
     { src: 'pera.png', category: 'kyomu' },
     { src: 'velto.png', category: 'kyomu' },
+    { src: 'fainon.png', category: 'kaimetsu' },
     { src: 'seiba.png', category: 'kaimetsu' },
     { src: 'modis.png', category: 'kaimetsu' },
     { src: 'syu1.png', category: 'kaimetsu' },
