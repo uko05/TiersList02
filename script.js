@@ -75,6 +75,7 @@ const imageData = [
     { src: 'byakuro.png', category: 'houjou' },
     { src: 'natasya.png', category: 'houjou' },
     { src: 'reisa.png', category: 'houjou' },
+    { src: 'nagayatuki.png', category: 'kioku' },
     { src: 'hiansi.png', category: 'kioku' },
     { src: 'kyasuto.png', category: 'kioku' },
     { src: 'aguraia.png', category: 'kioku' },
