@@ -361,23 +361,37 @@ header {
 /* スマホの縦画面表示に対応 768px */
 @media only screen and (max-width: 932px) {
     .container {
-        grid-template-columns: repeat(8, minmax(100px, 1fr)); /* 各列を100px固定 */
+        //grid-template-columns: repeat(8, minmax(100px, 1fr)); /* 各列を100px固定 */
         overflow-x: auto; /* 横スクロールを有効化 */
         justify-content: start; /* スクロール位置を左に固定 */
+    grid-template-columns: repeat(8, 90px); /* 8列 */
+    grid-template-rows: auto repeat(3, 90px); /* 1行目自動調整 + 3行 */
+    max-width: 720px;
         padding: 10px 5px 5px 5px;
     }
-    
+    .container {
+    display: grid;
+}
+.cell img {
+    width: 90%;
+    height: 90%;
+}
+
+.image-list img {
+    width: 90px; /* 画像の幅を固定 */
+    height: 90px; /* 画像の高さを固定 */
+}
+
+.image-item {
+    max-width: 90%;
+    max-height: 90%;
+}
+
     #grid {
       margin-left: auto;
       margin-right: 0;
     }
     
-    // .cell {
-    //     width: 100%;
-    //     height: auto; /* 高さを自動調整 */
-    //     border-radius: 5px; /* 角を少し丸める */
-    // }
-
     .tabs {
         flex-direction: column; /* タブを縦並びに */
     }
