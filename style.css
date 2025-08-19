@@ -382,15 +382,10 @@ header {
     height: 90px; /* 画像の高さを固定 */
 }
 
-.image-item {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-    #grid {
-      margin-left: auto;
-      margin-right: 0;
-    }
+    // #grid {
+    //   margin-left: auto;
+    //   margin-right: 0;
+    // }
     
     .tabs {
         flex-direction: column; /* タブを縦並びに */
