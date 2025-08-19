@@ -364,29 +364,17 @@ header {
         //grid-template-columns: repeat(8, minmax(100px, 1fr)); /* 各列を100px固定 */
         overflow-x: auto; /* 横スクロールを有効化 */
         justify-content: start; /* スクロール位置を左に固定 */
-    grid-template-columns: repeat(8, 90px); /* 8列 */
-    grid-template-rows: auto repeat(3, 90px); /* 1行目自動調整 + 3行 */
-    max-width: 720px;
+        grid-template-columns: repeat(8, 90px); /* 8列 */
+        grid-template-rows: auto repeat(3, 90px); /* 1行目自動調整 + 3行 */
+        max-width: 720px;
         padding: 10px 5px 5px 5px;
     }
-    .container {
-    display: grid;
-}
-.cell img {
-    width: 90%;
-    height: 90%;
-}
 
-.image-list img {
-    width: 90px; /* 画像の幅を固定 */
-    height: 90px; /* 画像の高さを固定 */
-}
+    .image-list img {
+        width: 90px; /* 画像の幅を固定 */
+        height: 90px; /* 画像の高さを固定 */
+    }
 
-    // #grid {
-    //   margin-left: auto;
-    //   margin-right: 0;
-    // }
-    
     .tabs {
         flex-direction: column; /* タブを縦並びに */
     }
@@ -395,6 +383,10 @@ header {
         font-size: 20px; /* タイトルのフォントサイズを縮小 */
     }
 
+    .sad_label_migi {
+        width: 720px;
+        padding: 3px; /* 幅を広くするためのパディング */
+    }
     #save-button {
         padding: 10px 40px; /* ボタンのサイズを縮小 */
         font-size: 14px;
