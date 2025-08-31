@@ -372,34 +372,6 @@ function loadImages() {
     }
 }
 
-// function saveImage() {
-//     html2canvas(document.getElementById('grid'), { 
-//         useCORS: true, 
-//         scale: 2 // スケールを調整して解像度を上げる
-//     }).then(canvas => {
-//         canvas.toBlob(function(blob) {
-//             const link = document.createElement('a');
-//             link.href = URL.createObjectURL(blob);
-//             
-//             // 現在の日時を「yyyyMMdd_HHmmss」形式にフォーマット
-//             const now = new Date();
-//             const year = now.getFullYear();
-//             const month = String(now.getMonth() + 1).padStart(2, '0'); // 月は0から始まるので+1
-//             const day = String(now.getDate()).padStart(2, '0');
-//             const hours = String(now.getHours()).padStart(2, '0');
-//             const minutes = String(now.getMinutes()).padStart(2, '0');
-//             const seconds = String(now.getSeconds()).padStart(2, '0');
-// 
-//             const formattedDate = `${year}${month}${day}_${hours}${minutes}${seconds}`;
-//             link.download = `スタレ推しキャラランキング_運命_${formattedDate}.png`; // ファイル名の変更
-//             
-//             link.click();
-//         }, 'image/png');
-//     }).catch(error => {
-//         console.error('Error capturing image:', error);
-//     });
-// }
-
 function saveImage() {
   const grid = document.getElementById('grid');
   if (!grid) return;
@@ -459,5 +431,19 @@ function saveImage() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', loadImages);
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages();
 
+    const sidebar = document.getElementById('sidebar');
+    const sizeOptions = document.querySelectorAll('input[name="size-option"]');
+
+    sizeOptions.forEach(option => {
+        option.addEventListener('change', (event) => {
+            if (event.target.value === 'default') {
+                sidebar.style.display = 'block';   // ← 左バー表示
+            } else if (event.target.value === 'hakai') {
+                sidebar.style.display = 'none';    // ← 左バー非表示
+            }
+        });
+    });
+});
