@@ -119,7 +119,7 @@ const i18n = {
     path_elation: "愉悦",
   },
   en: {
-    title: "Honkai:StarRail Oshi Character Ranking",
+    title: "Honkai:StarRail Oshi Character Ranking【Path】",
     save: "Save Image",
     default: "Default",
     hideLeft: "Hide Left Bar",
