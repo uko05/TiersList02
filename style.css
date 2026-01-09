@@ -278,6 +278,11 @@ header {
     border-radius: 5px 5px 0 0;
     flex: 1;
     box-sizing: border-box; /* ボックスサイズを含める */
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 6px 8px;   /* ← もう一段だけ詰めると安定 */
+  line-height: 1.2;
+  flex-shrink: 0;     /* ← これも超重要 */
 }
 
 .tab-wrap:after {
@@ -318,6 +323,18 @@ header {
 /* ラジオボタン非表示 */
 .tab-switch {
     display: none;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+.lang-switch label {
+  margin-left: 8px;
+  cursor: pointer;
 }
 
 #save-button {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="スタレの推しキャラを運命別に自由に並べてランキング・Tier表を作れるサイトです。画像を保存して自分の推しをみんなに共有しよう！推しの共有の他にも色々な使い方もできます！うーこの部屋では「推しキャラランキング」の他にも色々な機能があるから試してみてね！">
+    <meta name="description" content="崩壊:スターレイル(Honkai: Star Rail)の推しキャラを運命別に自由に並べてランキング・Tier表を作れるサイトです。画像を保存して自分の推しをみんなに共有しよう！推しの共有の他にも色々な使い方もできます！スタレ推しキャラランキング【運命】| Honkai:StarRail Oshi Character Ranking |うーこの部屋では「推しキャラランキング」の他にも色々な機能があるから試してみてね！">
 
     <title>【スタレ - 運命】うーこの推しキャラランキング - うーこの部屋</title>
     <link rel="stylesheet" href="style.css">
@@ -34,12 +34,25 @@
     </script>
 </head>
 <body>
+    <div class="lang-switch">
+      <label><input type="radio" name="lang" value="ja" checked> 日本語</label>
+      <label><input type="radio" name="lang" value="en"> English</label>
+    </div>
+
     <header>
-        <h1>スタレ推しキャラランキング【運命】</h1>
+        <h1 data-i18n="title">スタレ推しキャラランキング【運命】</h1>
         <button id="save-button">Save Image</button>
         <div>
-            <label><input type="radio" name="size-option" value="default" checked> デフォルト </label>
-            <label><input type="radio" name="size-option" value="hakai"> 左バー消滅 </label>
+            <label><input type="radio" name="size-option" value="default" checked>
+              <span data-i18n="default">デフォルト</span>
+            </label>
+
+            <label><input type="radio" name="size-option" value="hakai">
+              <span data-i18n="hideLeft">左バー消滅</span>
+            </label>
+            
+            <br>
+            <span data-i18n="mobileHint">※スマホの人は横画面推奨</span>
         </div>
     </header>
     <div class="container" id="grid">
@@ -89,7 +102,7 @@
         <div class="header"><img src="chara/Genso/houjou.png" alt="豊穣"></div>
         <div class="header"><img src="chara/Genso/kioku.png" alt="記憶"></div>
         <div class="header"><img src="chara/Genso/yuetu.png" alt="愉悦"></div>
-
+        
         <!-- グリッドアイテムを追加 -->
         <div class="cell" data-position="0"></div>
         <div class="cell" data-position="1"></div>
@@ -123,7 +136,14 @@
   
     <div class="tab-wrap">
         <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" />
-        <label class="tab-label" for="TAB-01" data-category="kaimetsu">壊滅</label>
+        <label
+          class="tab-label"
+          for="TAB-01"
+          data-category="kaimetsu"
+          data-i18n="path_destruction"
+        >
+          壊滅
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -131,7 +151,15 @@
         </div>
         
         <input id="TAB-02" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-02" data-category="junsyu">巡狩</label>
+        <label
+          class="tab-label"
+          for="TAB-02"
+          data-category="junsyu"
+          data-i18n="path_hunt"
+        >
+          巡狩
+        </label>
+        
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -139,7 +167,14 @@
         </div>
         
         <input id="TAB-03" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-03" data-category="kyomu">虚無</label>
+        <label
+          class="tab-label"
+          for="TAB-03"
+          data-category="kyomu"
+          data-i18n="path_nihility"
+        >
+          虚無
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -147,7 +182,14 @@
         </div>
         
         <input id="TAB-04" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-04" data-category="tie">知恵</label>
+        <label
+          class="tab-label"
+          for="TAB-04"
+          data-category="tie"
+          data-i18n="path_erudition"
+        >
+          知恵
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -155,7 +197,14 @@
         </div>
         
         <input id="TAB-05" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-05" data-category="songo">存護</label>
+        <label
+          class="tab-label"
+          for="TAB-05"
+          data-category="songo"
+          data-i18n="path_preservation"
+        >
+          存護
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -163,7 +212,14 @@
         </div>
         
         <input id="TAB-06" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-06" data-category="tyouwa">調和</label>
+        <label
+          class="tab-label"
+          for="TAB-06"
+          data-category="tyouwa"
+          data-i18n="path_harmony"
+        >
+          調和
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -171,7 +227,14 @@
         </div>
         
         <input id="TAB-07" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-07" data-category="houjou">豊穣</label>
+        <label
+          class="tab-label"
+          for="TAB-07"
+          data-category="houjou"
+          data-i18n="path_abundance"
+        >
+          豊穣
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -179,7 +242,14 @@
         </div>
         
         <input id="TAB-08" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-08" data-category="kioku">記憶</label>
+        <label
+          class="tab-label"
+          for="TAB-08"
+          data-category="kioku"
+          data-i18n="path_remembrance"
+        >
+          記憶
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->
@@ -187,7 +257,14 @@
         </div>
         
         <input id="TAB-09" type="radio" name="TAB" class="tab-switch" />
-        <label class="tab-label" for="TAB-09" data-category="yuetu">愉悦</label>
+        <label
+          class="tab-label"
+          for="TAB-09"
+          data-category="yuetu"
+          data-i18n="path_elation"
+        >
+          愉悦
+        </label>
         <div class="tab-content">
             <div class="image-list">
                 <!-- サムネイル画像をJavaScriptで追加します -->

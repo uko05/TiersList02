@@ -101,6 +101,71 @@ const SELECTED_LABEL = '☑';
 // タブごとの選択状態を管理するためのオブジェクト
 const tabSelections = {};
 
+const i18n = {
+  ja: {
+    title: "スタレ推しキャラランキング【運命】",
+    save: "Save Image",
+    default: "デフォルト",
+    hideLeft: "左バー消滅",
+    mobileHint: "※スマホの人は横画面推奨",
+    path_destruction: "壊滅",
+    path_hunt: "巡狩",
+    path_nihility: "虚無",
+    path_erudition: "知恵",
+    path_preservation: "存護",
+    path_harmony: "調和",
+    path_abundance: "豊穣",
+    path_remembrance: "記憶",
+    path_elation: "愉悦",
+  },
+  en: {
+    title: "Honkai:StarRail Oshi Character Ranking",
+    save: "Save Image",
+    default: "Default",
+    hideLeft: "Hide Left Bar",
+    mobileHint: "*For mobile, landscape mode recommended",
+    path_destruction: "Destruction",
+    path_hunt: "Hunt",
+    path_nihility: "Nihility",
+    path_erudition: "Erudition",
+    path_preservation: "Preservation",
+    path_harmony: "Harmony",
+    path_abundance: "Abundance",
+    path_remembrance: "Remembrance",
+    path_elation: "Elation",
+  }
+};
+
+// ===== i18n適用 =====
+function applyLang(lang) {
+  const dict = i18n[lang] || i18n.ja;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (dict[key] != null) el.textContent = dict[key];
+  });
+
+  // 言語を保存（次回も維持）
+  localStorage.setItem("lang", lang);
+}
+
+// ラジオボタンの監視
+function initLangSwitch() {
+  const saved = localStorage.getItem("lang") || "ja";
+  const radio = document.querySelector(`input[name="lang"][value="${saved}"]`);
+  if (radio) radio.checked = true;
+
+  // 初期適用
+  applyLang(saved);
+
+  // change適用（全ラジオに付与）
+  document.querySelectorAll('input[name="lang"]').forEach(r => {
+    r.addEventListener("change", (e) => {
+      applyLang(e.target.value);
+    });
+  });
+}
+
 //------------------------------------------------------------------------------------------------
 const toggleButton = document.getElementById('toggle-button');
 const sidebar = document.getElementById('sidebar');
@@ -448,7 +513,15 @@ function saveImage() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    initLangSwitch();
     loadImages();
+
+    // 画像生成などでDOMが増えた後に、現在の言語でもう一度適用
+    const currentLang =
+      document.querySelector('input[name="lang"]:checked')?.value ||
+      localStorage.getItem("lang") ||
+      "ja";
+    applyLang(currentLang);
 
     const sidebar = document.getElementById('sidebar');
     const sizeOptions = document.querySelectorAll('input[name="size-option"]');
