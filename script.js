@@ -13,6 +13,7 @@ const imageData = [
     { src: 'jepado.png', category: 'songo' },
     { src: 'nanoka.png', category: 'songo' },
     
+    { src: 'sinazu.png', category: 'junsyu' },
     { src: 'atya.png', category: 'junsyu' },
     { src: 'hisyo.png', category: 'junsyu' },
     { src: 'boothill.png', category: 'junsyu' },
