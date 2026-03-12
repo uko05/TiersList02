@@ -2,6 +2,8 @@ import { incrementBakatareCount } from './bakatareCount.js';
 
 const imageFolder = 'chara/';
 const imageData = [
+    { src: 'syu5.png', category: 'yuetu' },
+    { src: 'sei5.png', category: 'yuetu' },
     { src: 'hiei.png', category: 'yuetu' },
     { src: 'ginro2.png', category: 'yuetu' },
     { src: 'hibana.png', category: 'yuetu' },
