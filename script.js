@@ -1,107 +1,11 @@
 import { incrementBakatareCount } from './bakatareCount.js';
 
+import { starrailChars } from 'https://cdn.jsdelivr.net/gh/uko05/99_SharedImage@main/02_Starrail/chara_data/starrail_chars.js';
+
 const imageFolder = 'https://cdn.jsdelivr.net/gh/uko05/99_SharedImage@main/02_Starrail/chara_icon/';
-const imageData = [
-    { src: 'syu5.png', category: 'yuetu' },
-    { src: 'sei5.png', category: 'yuetu' },
-    { src: 'hiei.png', category: 'yuetu' },
-    { src: 'ginro2.png', category: 'yuetu' },
-    { src: 'hibana.png', category: 'yuetu' },
-    { src: 'koukou.png', category: 'yuetu' },
-    
-    { src: 'tankou2.png', category: 'songo' },
-    { src: 'syu2.png', category: 'songo' },
-    { src: 'sei2.png', category: 'songo' },
-    { src: 'aben.png', category: 'songo' },
-    { src: 'hugen.png', category: 'songo' },
-    { src: 'jepado.png', category: 'songo' },
-    { src: 'nanoka.png', category: 'songo' },
-    
-    { src: 'sinazu.png', category: 'junsyu' },
-    { src: 'atya.png', category: 'junsyu' },
-    { src: 'hisyo.png', category: 'junsyu' },
-    { src: 'boothill.png', category: 'junsyu' },
-    { src: 'reisio.png', category: 'junsyu' },
-    { src: 'topazu.png', category: 'junsyu' },
-    { src: 'zere.png', category: 'junsyu' },
-    { src: 'nanoka2.png', category: 'junsyu' },
-    { src: 'moze.png', category: 'junsyu' },
-    { src: 'genkyo.png', category: 'junsyu' },
-    { src: 'susyo.png', category: 'junsyu' },
-    { src: 'tankou.png', category: 'junsyu' },
-    
-    { src: 'anaikusu.png', category: 'tie' },
-    { src: 'heltamama.png', category: 'tie' },
-    { src: 'ranpa.png', category: 'tie' },
-    { src: 'jeido.png', category: 'tie' },
-    { src: 'arujen.png', category: 'tie' },
-    { src: 'keigen.png', category: 'tie' },
-    { src: 'seijaku.png', category: 'tie' },
-    { src: 'sebaru.png', category: 'tie' },
-    { src: 'helta.png', category: 'tie' },
-    { src: 'himeko.png', category: 'tie' },
-    
-    { src: 'daria.png', category: 'kyomu' },
-    { src: 'seirensu.png', category: 'kyomu' },
-    { src: 'saferu.png', category: 'kyomu' },
-    { src: 'newteiun.png', category: 'kyomu' },
-    { src: 'syokyu.png', category: 'kyomu' },
-    { src: 'yomi.png', category: 'kyomu' },
-    { src: 'swan.png', category: 'kyomu' },
-    { src: 'kahuka.png', category: 'kyomu' },
-    { src: 'ginro.png', category: 'kyomu' },
-    { src: 'ketya.png', category: 'kyomu' },
-    { src: 'ruka.png', category: 'kyomu' },
-    { src: 'sanpo.png', category: 'kyomu' },
-    { src: 'pera.png', category: 'kyomu' },
-    { src: 'velto.png', category: 'kyomu' },
-    
-    { src: 'fainon.png', category: 'kaimetsu' },
-    { src: 'seiba.png', category: 'kaimetsu' },
-    { src: 'modis.png', category: 'kaimetsu' },
-    { src: 'syu1.png', category: 'kaimetsu' },
-    { src: 'sei1.png', category: 'kaimetsu' },
-    { src: 'unri.png', category: 'kaimetsu' },
-    { src: 'hotaru.png', category: 'kaimetsu' },
-    { src: 'ingetsu.png', category: 'kaimetsu' },
-    { src: 'keiryu.png', category: 'kaimetsu' },
-    { src: 'jin.png', category: 'kaimetsu' },
-    { src: 'misia.png', category: 'kaimetsu' },
-    { src: 'setui.png', category: 'kaimetsu' },
-    { src: 'hukku.png', category: 'kaimetsu' },
-    { src: 'kurara.png', category: 'kaimetsu' },
-    { src: 'aran.png', category: 'kaimetsu' },
-    
-    { src: 'keryu.png', category: 'tyouwa' },
-    { src: 'toribi.png', category: 'tyouwa' },
-    { src: 'sunday.png', category: 'tyouwa' },
-    { src: 'syu3.png', category: 'tyouwa' },
-    { src: 'sei3.png', category: 'tyouwa' },
-    { src: 'robin.png', category: 'tyouwa' },
-    { src: 'hanabi.png', category: 'tyouwa' },
-    { src: 'ruanmama.png', category: 'tyouwa' },
-    { src: 'kana.png', category: 'tyouwa' },
-    { src: 'gyoku.png', category: 'tyouwa' },
-    { src: 'teiun.png', category: 'tyouwa' },
-    { src: 'buronya.png', category: 'tyouwa' },
-    { src: 'aster.png', category: 'tyouwa' },
-    
-    { src: 'fofo.png', category: 'houjou' },
-    { src: 'rasetu.png', category: 'houjou' },
-    { src: 'gyaraga.png', category: 'houjou' },
-    { src: 'rinkusu.png', category: 'houjou' },
-    { src: 'byakuro.png', category: 'houjou' },
-    { src: 'natasya.png', category: 'houjou' },
-    { src: 'reisa.png', category: 'houjou' },
-    
-    { src: 'kyurene.png', category: 'kioku' },
-    { src: 'nagayatuki.png', category: 'kioku' },
-    { src: 'hiansi.png', category: 'kioku' },
-    { src: 'kyasuto.png', category: 'kioku' },
-    { src: 'aguraia.png', category: 'kioku' },
-    { src: 'syu4.png', category: 'kioku' },
-    { src: 'sei4.png', category: 'kioku' }
-];
+const imageData = starrailChars
+    .filter(c => c.path !== null)
+    .map(c => ({ src: c.icon, category: c.path }));
 const MAX_SELECTION = 3;
 const SELECTED_LABEL = '☑';
 
